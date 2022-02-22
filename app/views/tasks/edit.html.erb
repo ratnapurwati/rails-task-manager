@@ -1,0 +1,15 @@
+<h1 class="text-center">Edit Task</h1>
+
+<div class="container col-4 " >
+  <%= simple_form_for @task do |f| %>
+    <%= f.input :title %>
+    <%= f.input :details%>
+    <%= f.input :completed %>
+     <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+  <br>
+  <br>
+  <%= link_to tasks_path(@task) do%>
+      <i class="fas fa-arrow-alt-circle-left"> Back to Tasks</i>
+  <% end %>
+</div>

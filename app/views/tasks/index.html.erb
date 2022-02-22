@@ -1,0 +1,19 @@
+<div class="container col-4">
+<h1 class="text-center">My Tasks</h1>
+<ul class="d-grid gap-3 list-unstyled">
+  <% @tasks.each do |task| %>
+    <li class="p-2 bg-light border d-flex justify-content-between">
+      <%= link_to task.title, task_path(task), class: "text-decoration-none text-black"%>
+      <%= link_to task_path(task), method: :delete, data: { confirm: "Are you sure?" } do %>
+           <i class="fas fa-trash-alt"></i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<br>
+<p class="btn btn-secondary">
+  <%= link_to tasks_new_path, class: "text-decoration-none text-white" do %>
+  <i class="fas fa-plus-circle">  Add a new task</i>
+  <% end %>
+</p>
+</div>

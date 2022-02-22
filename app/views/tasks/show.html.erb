@@ -1,0 +1,13 @@
+<div class="container col-4">
+  <p class="p-2 bg-light border"><%= @task.title %></p>
+  <p class="p-2 bg-light border"><%= @task.details%></p>
+  <p class="p-2 bg-light border"><%= @task.completed%></p>
+  <p>
+    <%= link_to edit_task_path(@task) do%>
+      <i class="fas fa-edit">   Edit This Task</i>
+    <% end %>
+  </p>
+  <%= link_to tasks_path(@task) do%>
+      <i class="fas fa-arrow-alt-circle-left"> Back to Tasks</i>
+  <% end %>
+</div>
